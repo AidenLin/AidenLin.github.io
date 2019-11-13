@@ -401,44 +401,20 @@
       
         
           
-            <h4 id="Exy4412产品发布"><a href="#Exy4412产品发布" class="headerlink" title="Exy4412产品发布"></a>Exy4412产品发布</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">准备工作：</span><br><span class="line">产品发布之前需要保证程序能够自动运行</span><br><span class="line">1）开机自动运行shell，不需要用户输入enter键</span><br><span class="line">2）把开机之后需要执行的命令放到开机自启动文件内。/etc/profile文件</span><br></pre></td></tr></table></figure>
+          Exy4412产品发布1234准备工作：产品发布之前需要保证程序能够自动运行1）开机自动运行shell，不需要用户输入enter键2）把开机之后需要执行的命令放到开机自启动文件内。/etc/profile文件
 
 
-<ul>
-<li>insmod /work/key_drv.ko</li>
-<li>/work/ui.out &amp;    (后台运行)</li>
-<li>/work/ctrl.out &amp;</li>
-</ul>
-<p>1、挂载方式<br>2、配置内核支持</p>
-<h2 id="3、重新烧写uboot以及内核"><a href="#3、重新烧写uboot以及内核" class="headerlink" title="3、重新烧写uboot以及内核"></a>3、重新烧写uboot以及内核</h2><p>4、烧写根文件系统到ext3格式的文件</p>
-<p>4.1、进入uboot命令，格式化sd卡</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fdisk -c 0 320 2057 520</span><br><span class="line"> fatformat mmc 0:1</span><br><span class="line"> ext3format mmc 0:2</span><br><span class="line"> ext3format mmc 0:3</span><br><span class="line"> ext3format mmc 0:4</span><br></pre></td></tr></table></figure>
 
-
-<p>4.2、复制根文件系统到系统sd卡存放根文件系统的分区<br>把 sd 卡拔出放到虚拟机上，把之前制作好的根文件系统拷贝到 ext3 格式文件的分区<br>查看sd卡分区</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# ls /dev/sd*</span><br><span class="line">/dev/sdb /dev/sdb1 /dev/sdb2 /dev/sdb3 /dev/sdb4</span><br></pre></td></tr></table></figure>
-
-
-<p>查看sd卡详细分区</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# fdisk -l /dev/sdb</span><br></pre></td></tr></table></figure>
-
-
-<p>4.3、把 sd 卡分区 2 的设备节点挂载到/mnt 目录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost root_nfs]# mkdir /mnt/sdb</span><br><span class="line">[root@localhost root_nfs]# mount -t ext3 /dev/sdb2  /mnt/sdb/</span><br><span class="line">[root@localhost root_nfs]# ls /mnt/sdb/</span><br><span class="line"> lost+found</span><br></pre></td></tr></table></figure>
-
-
-<p>4.4、 把制作好的根文件系统拷贝到/mnt<br>进入根文件系统目录：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# cd /xyd/rootfs</span><br><span class="line">[root@localhost root_nfs]# ls</span><br></pre></td></tr></table></figure>
-
-
-<p>复制全部文件到 sd 卡分区 2 所接的目录：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost root_nfs]# cp * -R /mnt/sdb/</span><br><span class="line">[root@localhost root_nfs]# ls /mnt/sdb</span><br></pre></td></tr></table></figure>
-
-
-<p>4.5、重启开发板，修改 u-boot 环境变量<br>拷贝完成后，放回 tiny4412 中，启动 u-boot，修改 bootargs。<br> set bootargs root=/dev/mmcblk0p2 rootfstype=ext3 console=ttySAC0,115200 init=/linuxrc uhost0=y ctp=2 skipcali=y lcd=X710</p>
-<p>保存环境变量：<br>SMDK4412 # save<br>Saving Environment to SMDK bootable device… done<br>SMDK4412 # boot</p>
-
-          
+insmod /work/key_drv.ko
+/work/ui.out &amp;
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/11/13/new-article-test/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -591,10 +567,15 @@
       
         
           
-            <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt; </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt; </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;unistd.h&gt; </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;arpa/inet.h&gt; </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;sys/socket.h&gt; </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;sys/stat.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//打开文件</span></span><br><span class="line"><span class="keyword">int</span> fd;</span><br><span class="line"><span class="comment">//客户端socket</span></span><br><span class="line"><span class="keyword">int</span> client_sock;</span><br><span class="line"><span class="comment">//文件路径</span></span><br><span class="line"><span class="keyword">char</span> path[<span class="number">100</span>];</span><br><span class="line"><span class="comment">//段口号</span></span><br><span class="line"><span class="keyword">char</span> port[<span class="number">100</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">//发送线程</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">sendsocket</span><span class="params">(<span class="keyword">void</span> *arg)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//接受socket</span></span><br><span class="line">	<span class="keyword">int</span> st = *(<span class="keyword">int</span> *)arg;</span><br><span class="line">	<span class="keyword">char</span> sendbuffer[<span class="number">100</span>]; </span><br><span class="line">	<span class="keyword">char</span> writebuffer[<span class="number">100</span>];</span><br><span class="line">	<span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">		<span class="comment">//向服务器发送数据 </span></span><br><span class="line">		<span class="built_in">memset</span>(sendbuffer, <span class="number">0</span>, <span class="keyword">sizeof</span>(sendbuffer)); </span><br><span class="line">		<span class="comment">//printf("请输入消息：");</span></span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%s"</span>,sendbuffer);</span><br><span class="line">		<span class="built_in">memset</span>(writebuffer, <span class="number">0</span>, <span class="keyword">sizeof</span>(writebuffer)); </span><br><span class="line">		<span class="built_in">strcat</span>(writebuffer,sendbuffer);</span><br><span class="line">		<span class="built_in">strcat</span>(writebuffer,<span class="string">"\n"</span>);</span><br><span class="line">		<span class="comment">//写入文件</span></span><br><span class="line">		<span class="built_in">write</span>(fd,writebuffer,<span class="keyword">sizeof</span>(writebuffer));</span><br><span class="line">		<span class="comment">//发送消息</span></span><br><span class="line">		send(st, sendbuffer, <span class="built_in">strlen</span>(sendbuffer), <span class="number">0</span>); </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//接受线程</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">recvsocket</span><span class="params">(<span class="keyword">void</span> *arg)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> st = *(<span class="keyword">int</span> *)arg;</span><br><span class="line">	<span class="keyword">char</span> receivebuffer[<span class="number">100</span>]; </span><br><span class="line">	<span class="keyword">char</span> writebuffer[<span class="number">100</span>];</span><br><span class="line">	<span class="keyword">int</span> n; </span><br><span class="line">	<span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">		<span class="comment">//读取服务器传回的数据 </span></span><br><span class="line">		<span class="built_in">memset</span>(receivebuffer, <span class="number">0</span>, <span class="keyword">sizeof</span>(receivebuffer));</span><br><span class="line">		n = recv(st, receivebuffer, <span class="keyword">sizeof</span>(receivebuffer), <span class="number">0</span>);  </span><br><span class="line">		<span class="comment">//用于判断通信是否结束 </span></span><br><span class="line">		<span class="keyword">if</span>(n&lt;=<span class="number">0</span>)</span><br><span class="line">			<span class="keyword">break</span>;		</span><br><span class="line">		<span class="built_in">memset</span>(writebuffer, <span class="number">0</span>, <span class="keyword">sizeof</span>(writebuffer)); </span><br><span class="line">		<span class="built_in">strcat</span>(writebuffer,receivebuffer);</span><br><span class="line">		<span class="built_in">strcat</span>(writebuffer,<span class="string">"\n"</span>);</span><br><span class="line">		<span class="comment">//写入文件</span></span><br><span class="line">		<span class="built_in">write</span>(fd,writebuffer,<span class="keyword">sizeof</span>(writebuffer));</span><br><span class="line">		<span class="comment">//输出</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%s\n"</span>, receivebuffer);</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123; </span><br><span class="line"></span><br><span class="line">	<span class="comment">//创建套接字 </span></span><br><span class="line">	<span class="keyword">int</span> sock = socket(AF_INET, SOCK_STREAM, <span class="number">0</span>); </span><br><span class="line">	<span class="comment">//向服务器(特定的IP和端口)发起请求 </span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">serv_addr</span>;</span> </span><br><span class="line">	<span class="built_in">memset</span>(&amp;serv_addr, <span class="number">0</span>, <span class="keyword">sizeof</span>(serv_addr));<span class="comment">//每个字节都用0填充 </span></span><br><span class="line">	serv_addr.sin_family = AF_INET; </span><br><span class="line">	serv_addr.sin_addr.s_addr = inet_addr(<span class="string">"127.0.0.1"</span>); </span><br><span class="line">	serv_addr.sin_port = htons(<span class="number">6666</span>); </span><br><span class="line"></span><br><span class="line">	<span class="comment">//连接服务器，成功返回0 </span></span><br><span class="line">	client_sock = <span class="built_in">connect</span>(sock, (struct sockaddr*)&amp;serv_addr, <span class="keyword">sizeof</span>(serv_addr));</span><br><span class="line">	<span class="keyword">if</span>(client_sock == <span class="number">0</span>) &#123; </span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"服务器连接成功!\n"</span>); </span><br><span class="line">	&#125; </span><br><span class="line">	</span><br><span class="line">	<span class="comment">//新建一个结构体</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">client_addr</span>;</span> </span><br><span class="line">	<span class="built_in">memset</span>(&amp;client_addr, <span class="number">0</span>, <span class="keyword">sizeof</span>(client_addr));</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> len = <span class="keyword">sizeof</span>(client_addr);</span><br><span class="line">	<span class="comment">//获得本程序的sockaddr_in结构体</span></span><br><span class="line">	<span class="keyword">int</span> ti = getsockname(sock, (struct sockaddr*)&amp;client_addr, &amp;len);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//对字符串拼接得到路径</span></span><br><span class="line">	<span class="built_in">sprintf</span>(port,<span class="string">"%d"</span>,client_addr.sin_port);</span><br><span class="line">	<span class="built_in">strcat</span>(path,<span class="string">"./usernote/"</span>);</span><br><span class="line">	<span class="built_in">strcat</span>(path,port);</span><br><span class="line">	<span class="comment">//打开文件</span></span><br><span class="line">	fd = <span class="built_in">open</span>(path, O_CREAT|O_EXCL|O_WRONLY|O_APPEND|O_NONBLOCK);</span><br><span class="line">	<span class="keyword">if</span>(fd == <span class="number">-1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"失败！"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//创建发送接受两个线程  一个接受线程一个发送线程</span></span><br><span class="line">	<span class="keyword">pthread_t</span> thrd1, thrd2;</span><br><span class="line">	pthread_create(&amp;thrd1, <span class="literal">NULL</span>, sendsocket, &amp;sock);</span><br><span class="line">	pthread_create(&amp;thrd2, <span class="literal">NULL</span>, recvsocket, &amp;sock);</span><br><span class="line">	pthread_join(thrd1, <span class="literal">NULL</span>);</span><br><span class="line">	pthread_join(thrd2, <span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//关闭文件</span></span><br><span class="line">	<span class="built_in">close</span>(fd);</span><br><span class="line">	<span class="comment">//关闭套接字 </span></span><br><span class="line">	<span class="built_in">close</span>(sock); </span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-          
+          123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/11/13/new-article/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -747,8 +728,15 @@
       
         
           
-            
           
+          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/11/12/My-New-Post/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -901,21 +889,15 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/11/12/hello-world/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
