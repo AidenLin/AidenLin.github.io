@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>test2</title>
+    <title>安装交叉编译器</title>
     <url>/2019/11/14/test2/</url>
-    <content><![CDATA[<p>title: 安装交叉编译器</p>
-<p>回顾：<br>1、安装交叉编译器<br>arm-linux-gcc<br>gcc编译出来的结果是在ubuntu上运行，在开发板上无法运行<br>arm-linux-gcc: 交叉编译，编译出来的结果，可以在arm芯片上使用</p>
+    <content><![CDATA[<p>回顾：<br>1、安装交叉编译器<br>arm-linux-gcc<br>gcc编译出来的结果是在ubuntu上运行，在开发板上无法运行<br>arm-linux-gcc: 交叉编译，编译出来的结果，可以在arm芯片上使用</p>
 <p>2、编译&amp;&amp;下载uboot<br>1）源代码解压<br>2）选择开发板  make tiny4412_config<br>3）make<br>4）下载</p>
 <p>3、编译&amp;&amp;下载内核<br>1）源代码解压<br>2）配置  make menuconfig<br>3）修改makefile，把编译器改为交叉编译<br>4）make &amp;&amp; make zImage</p>
 <p>4、制作根文件系统</p>
@@ -54,7 +53,7 @@
 ]]></content>
   </entry>
   <entry>
-    <title>new article test</title>
+    <title>Exy4412产品发布</title>
     <url>/2019/11/13/new-article-test/</url>
     <content><![CDATA[<h4 id="Exy4412产品发布"><a href="#Exy4412产品发布" class="headerlink" title="Exy4412产品发布"></a>Exy4412产品发布</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">准备工作：</span><br><span class="line">产品发布之前需要保证程序能够自动运行</span><br><span class="line">1）开机自动运行shell，不需要用户输入enter键</span><br><span class="line">2）把开机之后需要执行的命令放到开机自启动文件内。/etc/profile文件</span><br></pre></td></tr></table></figure>
 
@@ -104,7 +103,24 @@
   <entry>
     <title>My New Post</title>
     <url>/2019/11/12/My-New-Post/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>对于屏幕和键盘有要求的用户，这一次的新品或许很有吸引力。</p>
+<p>北京时间 11 月 13 日晚，和 AirPods Pro 一样，苹果再一次在官网悄悄更新了产品，带来了 16 英寸的 MacBook Pro。虽然没有召开发布会有些出人意料，但这款全新的 MacBook Pro 依然给我们带来了很多升级和亮点，接下来和极客之选（公众号 GeekChoice）一起看看吧。</p>
+<h2 id="更大显示屏和更强处理器"><a href="#更大显示屏和更强处理器" class="headerlink" title="更大显示屏和更强处理器"></a>更大显示屏和更强处理器</h2><p>近几年在 Windows 笔记本阵营中出现了越来越多的窄边框笔记本电脑，无论是戴尔 XPS 系列还是华为 MateBook 系列，更大的屏占比带来了笔记本电脑视觉上的更好体验，这一点同样也出现在这一次的新 MacBook Pro 上面。</p>
+<p><img src="https://imgslim.geekpark.net/uploads/image/file/20/90/2090c0fab86518bf8a6828c5cc683eab.png" alt="img"></p>
+<p>全新 MacBook Pro 采用了窄边框设计，通过缩小左右边框宽度，在加入 16 英寸屏幕的同时却将机身三围控制在 35.79<em>24.59</em>1.62cm，这一尺寸相比之前的 MacBook Pro 15 英寸版本来说几乎没有多少变化（后者为 34.93<em>24.07</em>1.55cm），但却带来了更大的显示面积，这或许是其替换掉 15 英寸 MacBook Pro 的主要原因。</p>
+<p>除了屏幕变大，16 英寸 MacBook Pro 采用了 IPS 屏幕，分辨率也达到了 3072×1920（ppi 226），其亮度为 500 尼特，支持 P3 广色域和原彩显示。</p>
+<p><img src="https://imgslim.geekpark.net/uploads/image/file/b3/af/b3af27b25974d5e9e15a640f314a31f4.png" alt="img"></p>
+<p>16 英寸 MacBook Pro 搭载了第九代酷睿处理器（分为 i7 和 i9 两个版本），最高可选配 2.4GHz 8 核 Intel Core i9 处理器。内存为 16GB，最高可选配 64GB，更支持最高 8TB 固态硬盘可选配置。显卡部分采用 AMD Radeon Pro 5000M 系列。与上一代基础机型相比，其图形处理速度快达两倍以上，能更快地渲染并流畅播放超高清视频。</p>
+<p>另外，本次 MacBook Pro 依然配备了四个雷雳 3 (USB-C) 端口，这些配置升级对电脑散热提出了更高要求，官方表示相比前代产品而言，16 英寸的新 MacBook Pro 气流量增加 28%，散热器增大 35%，使 MacBook Pro 的最大持续功率提升了 12 瓦，散热效果更加强大了。</p>
+<h2 id="Touch-Bar-和键盘改进"><a href="#Touch-Bar-和键盘改进" class="headerlink" title="Touch Bar 和键盘改进"></a>Touch Bar 和键盘改进</h2><p>硬件配置升级之外，16 英寸 MacBook Pro 最大的变化在于对 Touch Bar 和键盘的改进。</p>
+<p>此前在 macOS Catalina 10.15.1 更新中，就有开发者发现苹果将 MacBook Pro 的 Touch Bar 部分改进，具体表现就是 Touch ID/电源按键和 Touch Bar 触控条分开。</p>
+<p>这种改进其实是为了更好解决之前出现的 Touch Bar 带来的问题，早前曾经有人遇到过将 MacBook Pro 连接外置显示器后再次打开电脑，屏幕背光会变成 0，这种情况下想要调整屏幕亮度又必须登录，然而登录需要按下无法工作的 Touch Bar 区域的 Touch ID/电源按键，这样的设计显然存在一定问题，也是苹果如此改进的原因之一。</p>
+<p><img src="https://imgslim.geekpark.net/uploads/image/file/9d/dc/9ddc761c827892da96eeab64c45a3c12.png" alt="img"></p>
+<p>还有键盘部分，早前受到吐槽的蝶式键盘在这一代上终于被剪刀式键盘取代，除了改进手感使其相比之前更稳定外，也修正了近年来蝶式键盘进灰失灵的缺陷，这一点或许是相比处理器对很多用户更有吸引力的一大变化。</p>
+<p><img src="https://imgslim.geekpark.net/uploads/image/file/3a/3e/3a3eaee29268b5a129dc25b2368b11ce.png" alt="img"></p>
+<p>对了，MacBook Pro 这一次还加强了电脑的声音表现和续航时间。六扬声器音响系统可营造更好的立体声音效。并且其双振动抵消低音单元能有效减少系统振动带来的影响，低音部分进一步增强。同时，内置的三麦克风阵列也方便用户随时随地创作音色纯净的音频内容，续航时间最长达到 11 小时，整体来说表现不错。</p>
+<p>最后是价格，16 英寸 MacBook Pro 有 AMD Radeon Pro 5300M 和 5500M 独显版本，起步价格分别为 18999 和 22199 元。自 2012 年停产 17 英寸 MacBook Pro 以来，苹果的 MacBook Pro 产品线只剩下 13、15 英寸两个版本，对于需要更大屏幕笔记本电脑工作的用户来说，这无疑带来了一些影响。这次提升集中在屏幕尺寸上，目标群体上比较明确，倾向于有生产力需求的人群，而非轻办公用户。</p>
+]]></content>
   </entry>
   <entry>
     <title>Hello World</title>
