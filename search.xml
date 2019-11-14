@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>test2</title>
+    <url>/2019/11/14/test2/</url>
+    <content><![CDATA[<p>回顾：<br>1、安装交叉编译器<br>arm-linux-gcc<br>gcc编译出来的结果是在ubuntu上运行，在开发板上无法运行<br>arm-linux-gcc: 交叉编译，编译出来的结果，可以在arm芯片上使用</p>
+<p>2、编译&amp;&amp;下载uboot<br>1）源代码解压<br>2）选择开发板  make tiny4412_config<br>3）make<br>4）下载</p>
+<p>3、编译&amp;&amp;下载内核<br>1）源代码解压<br>2）配置  make menuconfig<br>3）修改makefile，把编译器改为交叉编译<br>4）make &amp;&amp; make zImage</p>
+<p>4、制作根文件系统</p>
+<ul>
+<li>pri：打印环境变量</li>
+<li>nfs:网络文件系统</li>
+<li>nfsroot: 虚拟机的ip地址+网络文件系统</li>
+<li>ip:开发板的ip;虚拟机的ip;网关地址;子网掩码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">eth0: link is not ready</span><br><span class="line">no soundcards found</span><br></pre></td></tr></table></figure>
+
+
+<p>source insight：windows下面查看linux内核源码的强大工具</p>
+<p>字符驱动<br>一、什么是驱动？<br>作用：操作硬件，给应用层提供统一的接口。</p>
+<p>二、驱动编程框架（模块化编程）<br>1）驱动框架<br>2）驱动相关命令</p>
+<ul>
+<li>insmod：加载驱动</li>
+<li>rmmod：卸载驱动</li>
+<li>lsmod：查看已经动态加载的驱动</li>
+</ul>
+<p>三、字符驱动的编写</p>
+<p>杂项设备注册：<br>注册函数：misc_register();</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int misc_register(struct miscdevice *misc)</span><br></pre></td></tr></table></figure>
+
+
+<p>注销：</p>
+<p>四、驱动层read、write的使用</p>
+<p>五、led灯驱动<br>想让灯亮，要干什么？<br>1）查看原理图，确定led灯是哪个IO口驱动。</p>
+<p>2）</p>
+<p>申请使用IO口</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">gpio_request</span><br></pre></td></tr></table></figure>
+
+<p>配置IO口工作模式为输出模式</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">s3c_gpio_cfgpin</span><br></pre></td></tr></table></figure>
+
+<p>输出高低电平，控制LED</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">gpio_set_value</span><br><span class="line"></span><br><span class="line">gpio_get_value</span><br></pre></td></tr></table></figure>
+
+<p>配置IO口工作模式为输出模式<br>      输出高低电平，控制LED</p>
+<p>3）</p>
+<blockquote>
+<p>作业：</p>
+</blockquote>
+<p>1) 完善led驱动，实现支持4个LED<br>例如：write(fd, “1010”, 4); // 同时控制四个led灯的状态</p>
+<p>2) 写beep驱动（蜂鸣器驱动）<br>PWM0<br>XpwmTOUT0<br>GPD0_</p>
+<p>LED灯的IO口：EXYNOS4X12_GPM4(0)<br>蜂鸣器的IO口：EXYNOS4_GPD0(0)</p>
+]]></content>
+  </entry>
+  <entry>
     <title>new article test</title>
     <url>/2019/11/13/new-article-test/</url>
     <content><![CDATA[<h4 id="Exy4412产品发布"><a href="#Exy4412产品发布" class="headerlink" title="Exy4412产品发布"></a>Exy4412产品发布</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">准备工作：</span><br><span class="line">产品发布之前需要保证程序能够自动运行</span><br><span class="line">1）开机自动运行shell，不需要用户输入enter键</span><br><span class="line">2）把开机之后需要执行的命令放到开机自启动文件内。/etc/profile文件</span><br></pre></td></tr></table></figure>

@@ -86,14 +86,14 @@
 
 
 
-<meta name="description" content="Exy4412产品发布1234准备工作：产品发布之前需要保证程序能够自动运行1）开机自动运行shell，不需要用户输入enter键2）把开机之后需要执行的命令放到开机自启动文件内。&#x2F;etc&#x2F;profile文件    insmod &#x2F;work&#x2F;key_drv.ko &#x2F;work&#x2F;ui.out &amp;amp;    (后台运行) &#x2F;work&#x2F;ctrl.out &amp;amp;  1、挂载方式2、配置内核支持 3、">
+<meta name="description" content="回顾：1、安装交叉编译器arm-linux-gccgcc编译出来的结果是在ubuntu上运行，在开发板上无法运行arm-linux-gcc: 交叉编译，编译出来的结果，可以在arm芯片上使用 2、编译&amp;amp;&amp;amp;下载uboot1）源代码解压2）选择开发板  make tiny4412_config3）make4）下载 3、编译&amp;amp;&amp;amp;下载内核1）源代码解压2）配置  make">
 <meta property="og:type" content="article">
-<meta property="og:title" content="new article test">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;13&#x2F;new-article-test&#x2F;index.html">
+<meta property="og:title" content="test2">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;14&#x2F;test2&#x2F;index.html">
 <meta property="og:site_name" content="AidenLin的博客">
-<meta property="og:description" content="Exy4412产品发布1234准备工作：产品发布之前需要保证程序能够自动运行1）开机自动运行shell，不需要用户输入enter键2）把开机之后需要执行的命令放到开机自启动文件内。&#x2F;etc&#x2F;profile文件    insmod &#x2F;work&#x2F;key_drv.ko &#x2F;work&#x2F;ui.out &amp;amp;    (后台运行) &#x2F;work&#x2F;ctrl.out &amp;amp;  1、挂载方式2、配置内核支持 3、">
+<meta property="og:description" content="回顾：1、安装交叉编译器arm-linux-gccgcc编译出来的结果是在ubuntu上运行，在开发板上无法运行arm-linux-gcc: 交叉编译，编译出来的结果，可以在arm芯片上使用 2、编译&amp;amp;&amp;amp;下载uboot1）源代码解压2）选择开发板  make tiny4412_config3）make4）下载 3、编译&amp;amp;&amp;amp;下载内核1）源代码解压2）配置  make">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-13T07:30:28.255Z">
+<meta property="og:updated_time" content="2019-11-14T03:43:52.312Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/13/new-article-test/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/11/14/test2/"/>
 
 
 
 
 
-  <title>new article test | AidenLin的博客</title>
+  <title>test2 | AidenLin的博客</title>
   
 
 
@@ -301,7 +301,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/13/new-article-test/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/14/test2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="htlin">
@@ -318,7 +318,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">new article test</h1>
+          <h1 class="post-title" itemprop="name headline">test2</h1>
         
 
         <div class="post-meta">
@@ -330,8 +330,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-13T15:29:30+08:00">
-                2019-11-13
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-14T11:43:24+08:00">
+                2019-11-14
               </time>
             
 
@@ -362,7 +362,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  427 字
+                  446 字
                 </span>
               
 
@@ -399,42 +399,53 @@
       
 
       
-        <h4 id="Exy4412产品发布"><a href="#Exy4412产品发布" class="headerlink" title="Exy4412产品发布"></a>Exy4412产品发布</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">准备工作：</span><br><span class="line">产品发布之前需要保证程序能够自动运行</span><br><span class="line">1）开机自动运行shell，不需要用户输入enter键</span><br><span class="line">2）把开机之后需要执行的命令放到开机自启动文件内。/etc/profile文件</span><br></pre></td></tr></table></figure>
-
-
+        <p>回顾：<br>1、安装交叉编译器<br>arm-linux-gcc<br>gcc编译出来的结果是在ubuntu上运行，在开发板上无法运行<br>arm-linux-gcc: 交叉编译，编译出来的结果，可以在arm芯片上使用</p>
+<p>2、编译&amp;&amp;下载uboot<br>1）源代码解压<br>2）选择开发板  make tiny4412_config<br>3）make<br>4）下载</p>
+<p>3、编译&amp;&amp;下载内核<br>1）源代码解压<br>2）配置  make menuconfig<br>3）修改makefile，把编译器改为交叉编译<br>4）make &amp;&amp; make zImage</p>
+<p>4、制作根文件系统</p>
 <ul>
-<li>insmod /work/key_drv.ko</li>
-<li>/work/ui.out &amp;    (后台运行)</li>
-<li>/work/ctrl.out &amp;</li>
+<li>pri：打印环境变量</li>
+<li>nfs:网络文件系统</li>
+<li>nfsroot: 虚拟机的ip地址+网络文件系统</li>
+<li>ip:开发板的ip;虚拟机的ip;网关地址;子网掩码</li>
 </ul>
-<p>1、挂载方式<br>2、配置内核支持</p>
-<h2 id="3、重新烧写uboot以及内核"><a href="#3、重新烧写uboot以及内核" class="headerlink" title="3、重新烧写uboot以及内核"></a>3、重新烧写uboot以及内核</h2><p>4、烧写根文件系统到ext3格式的文件</p>
-<p>4.1、进入uboot命令，格式化sd卡</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fdisk -c 0 320 2057 520</span><br><span class="line"> fatformat mmc 0:1</span><br><span class="line"> ext3format mmc 0:2</span><br><span class="line"> ext3format mmc 0:3</span><br><span class="line"> ext3format mmc 0:4</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">eth0: link is not ready</span><br><span class="line">no soundcards found</span><br></pre></td></tr></table></figure>
 
 
-<p>4.2、复制根文件系统到系统sd卡存放根文件系统的分区<br>把 sd 卡拔出放到虚拟机上，把之前制作好的根文件系统拷贝到 ext3 格式文件的分区<br>查看sd卡分区</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# ls /dev/sd*</span><br><span class="line">/dev/sdb /dev/sdb1 /dev/sdb2 /dev/sdb3 /dev/sdb4</span><br></pre></td></tr></table></figure>
+<p>source insight：windows下面查看linux内核源码的强大工具</p>
+<p>字符驱动<br>一、什么是驱动？<br>作用：操作硬件，给应用层提供统一的接口。</p>
+<p>二、驱动编程框架（模块化编程）<br>1）驱动框架<br>2）驱动相关命令</p>
+<ul>
+<li>insmod：加载驱动</li>
+<li>rmmod：卸载驱动</li>
+<li>lsmod：查看已经动态加载的驱动</li>
+</ul>
+<p>三、字符驱动的编写</p>
+<p>杂项设备注册：<br>注册函数：misc_register();</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int misc_register(struct miscdevice *misc)</span><br></pre></td></tr></table></figure>
 
 
-<p>查看sd卡详细分区</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# fdisk -l /dev/sdb</span><br></pre></td></tr></table></figure>
+<p>注销：</p>
+<p>四、驱动层read、write的使用</p>
+<p>五、led灯驱动<br>想让灯亮，要干什么？<br>1）查看原理图，确定led灯是哪个IO口驱动。</p>
+<p>2）</p>
+<p>申请使用IO口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpio_request</span><br></pre></td></tr></table></figure>
 
+<p>配置IO口工作模式为输出模式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s3c_gpio_cfgpin</span><br></pre></td></tr></table></figure>
 
-<p>4.3、把 sd 卡分区 2 的设备节点挂载到/mnt 目录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost root_nfs]# mkdir /mnt/sdb</span><br><span class="line">[root@localhost root_nfs]# mount -t ext3 /dev/sdb2  /mnt/sdb/</span><br><span class="line">[root@localhost root_nfs]# ls /mnt/sdb/</span><br><span class="line"> lost+found</span><br></pre></td></tr></table></figure>
+<p>输出高低电平，控制LED</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gpio_set_value</span><br><span class="line"></span><br><span class="line">gpio_get_value</span><br></pre></td></tr></table></figure>
 
-
-<p>4.4、 把制作好的根文件系统拷贝到/mnt<br>进入根文件系统目录：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# cd /xyd/rootfs</span><br><span class="line">[root@localhost root_nfs]# ls</span><br></pre></td></tr></table></figure>
-
-
-<p>复制全部文件到 sd 卡分区 2 所接的目录：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost root_nfs]# cp * -R /mnt/sdb/</span><br><span class="line">[root@localhost root_nfs]# ls /mnt/sdb</span><br></pre></td></tr></table></figure>
-
-
-<p>4.5、重启开发板，修改 u-boot 环境变量<br>拷贝完成后，放回 tiny4412 中，启动 u-boot，修改 bootargs。<br> set bootargs root=/dev/mmcblk0p2 rootfstype=ext3 console=ttySAC0,115200 init=/linuxrc uhost0=y ctp=2 skipcali=y lcd=X710</p>
-<p>保存环境变量：<br>SMDK4412 # save<br>Saving Environment to SMDK bootable device… done<br>SMDK4412 # boot</p>
+<p>配置IO口工作模式为输出模式<br>      输出高低电平，控制LED</p>
+<p>3）</p>
+<blockquote>
+<p>作业：</p>
+</blockquote>
+<p>1) 完善led驱动，实现支持4个LED<br>例如：write(fd, “1010”, 4); // 同时控制四个led灯的状态</p>
+<p>2) 写beep驱动（蜂鸣器驱动）<br>PWM0<br>XpwmTOUT0<br>GPD0_</p>
+<p>LED灯的IO口：EXYNOS4X12_GPM4(0)<br>蜂鸣器的IO口：EXYNOS4_GPD0(0)</p>
 
       
     </div>
@@ -469,8 +480,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/13/new-article/" rel="next" title="new article">
-                <i class="fa fa-chevron-left"></i> new article
+              <a href="/2019/11/13/new-article-test/" rel="next" title="new article test">
+                <i class="fa fa-chevron-left"></i> new article test
               </a>
             
           </div>
@@ -478,10 +489,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/11/14/test2/" rel="prev" title="test2">
-                test2 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -538,17 +545,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -610,22 +608,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Exy4412产品发布"><span class="nav-number">1.</span> <span class="nav-text">Exy4412产品发布</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、重新烧写uboot以及内核"><span class="nav-number"></span> <span class="nav-text">3、重新烧写uboot以及内核</span></a></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
