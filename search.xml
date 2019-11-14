@@ -3,7 +3,8 @@
   <entry>
     <title>test2</title>
     <url>/2019/11/14/test2/</url>
-    <content><![CDATA[<p>回顾：<br>1、安装交叉编译器<br>arm-linux-gcc<br>gcc编译出来的结果是在ubuntu上运行，在开发板上无法运行<br>arm-linux-gcc: 交叉编译，编译出来的结果，可以在arm芯片上使用</p>
+    <content><![CDATA[<p>title: 安装交叉编译器</p>
+<p>回顾：<br>1、安装交叉编译器<br>arm-linux-gcc<br>gcc编译出来的结果是在ubuntu上运行，在开发板上无法运行<br>arm-linux-gcc: 交叉编译，编译出来的结果，可以在arm芯片上使用</p>
 <p>2、编译&amp;&amp;下载uboot<br>1）源代码解压<br>2）选择开发板  make tiny4412_config<br>3）make<br>4）下载</p>
 <p>3、编译&amp;&amp;下载内核<br>1）源代码解压<br>2）配置  make menuconfig<br>3）修改makefile，把编译器改为交叉编译<br>4）make &amp;&amp; make zImage</p>
 <p>4、制作根文件系统</p>
