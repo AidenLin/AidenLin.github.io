@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="https://www.w3.org/2005/Atom">
+  <title>AidenLin的博客</title>
+  
+  <subtitle>浮世三千，吾爱有三，日月与卿。日为朝，月为暮，卿为朝朝暮暮</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-11-16T07:45:54.761Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>htlin</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安装交叉编译器</title>
+    <link href="http://yoursite.com/2019/11/14/test2/"/>
+    <id>http://yoursite.com/2019/11/14/test2/</id>
+    <published>2019-11-14T03:43:24.803Z</published>
+    <updated>2019-11-16T07:45:54.761Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;回顾：&lt;br&gt;1、安装交叉编译器&lt;br&gt;arm-linux-gcc&lt;br&gt;gcc编译出来的结果是在ubuntu上运行，在开发板上无法运行&lt;br&gt;arm-linux-gcc: 交叉编译，编译出来的结果，可以在arm芯片上使用&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Exy4412产品发布</title>
+    <link href="http://yoursite.com/2019/11/13/new-article-test/"/>
+    <id>http://yoursite.com/2019/11/13/new-article-test/</id>
+    <published>2019-11-13T07:29:30.000Z</published>
+    <updated>2019-11-16T07:45:47.033Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;Exy4412产品发布&quot;&gt;&lt;a href=&quot;#Exy4412产品发布&quot; class=&quot;headerlink&quot; title=&quot;Exy4412产品发布&quot;&gt;&lt;/a&gt;Exy4412产品发布&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;准备工作：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;产品发布之前需要保证程序能够自动运行&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;1）开机自动运行shell，不需要用户输入enter键&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2）把开机之后需要执行的命令放到开机自启动文件内。/etc/profile文件&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;insmod /work/key_drv.ko&lt;/li&gt;
+&lt;li&gt;/work/ui.out &amp;amp;    (后台运行)&lt;/li&gt;
+&lt;li&gt;/work/ctrl.out &amp;amp;&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>new article</title>
+    <link href="http://yoursite.com/2019/11/13/new-article/"/>
+    <id>http://yoursite.com/2019/11/13/new-article/</id>
+    <published>2019-11-13T07:23:21.000Z</published>
+    <updated>2019-11-16T07:45:39.381Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/spa
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>My New Post</title>
+    <link href="http://yoursite.com/2019/11/12/My-New-Post/"/>
+    <id>http://yoursite.com/2019/11/12/My-New-Post/</id>
+    <published>2019-11-12T08:33:49.000Z</published>
+    <updated>2019-11-16T07:45:15.462Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;对于屏幕和键盘有要求的用户，这一次的新品或许很有吸引力。&lt;/p&gt;
+&lt;p&gt;北京时间 11 月 13 日晚，和 AirPods Pro 一样，苹果再一次在官网悄悄更新了产品，带来了 16 英寸的 MacBook Pro。虽然没有召开发布会有些出人意料，但这款全新的 MacBook Pro 依然给我们带来了很多升级和亮点，接下来和极客之选（公众号 GeekChoice）一起看看吧。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2019/11/12/hello-world/"/>
+    <id>http://yoursite.com/2019/11/12/hello-world/</id>
+    <published>2019-11-12T07:55:23.741Z</published>
+    <updated>2019-11-16T07:44:59.108Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
