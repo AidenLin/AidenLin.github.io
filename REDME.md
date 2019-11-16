@@ -1,1 +1,0 @@
-hexo + Git + node.js + GitHub 搭建的博客，仅供个人学习使用。
