@@ -67,27 +67,6 @@
   </entry>
   
   <entry>
-    <title>安装交叉编译器</title>
-    <link href="http://yoursite.com/2017/05/22/test2/"/>
-    <id>http://yoursite.com/2017/05/22/test2/</id>
-    <published>2017-05-21T16:00:00.000Z</published>
-    <updated>2019-11-18T02:45:38.918Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;回顾：&lt;br&gt;1、安装交叉编译器&lt;br&gt;arm-linux-gcc&lt;br&gt;gcc编译出来的结果是在ubuntu上运行，在开发板上无法运行&lt;br&gt;arm-linux-gcc: 交叉编译，编译出来的结果，可以在arm芯片上使用&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
-    
-    
-      <category term="arm linux" scheme="http://yoursite.com/tags/arm-linux/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Hello World</title>
     <link href="http://yoursite.com/2017/05/22/hello-world/"/>
     <id>http://yoursite.com/2017/05/22/hello-world/</id>
@@ -105,6 +84,27 @@
     
     
       <category term="blog" scheme="http://yoursite.com/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装交叉编译器</title>
+    <link href="http://yoursite.com/2017/05/22/test2/"/>
+    <id>http://yoursite.com/2017/05/22/test2/</id>
+    <published>2017-05-21T16:00:00.000Z</published>
+    <updated>2019-11-18T02:45:38.918Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;回顾：&lt;br&gt;1、安装交叉编译器&lt;br&gt;arm-linux-gcc&lt;br&gt;gcc编译出来的结果是在ubuntu上运行，在开发板上无法运行&lt;br&gt;arm-linux-gcc: 交叉编译，编译出来的结果，可以在arm芯片上使用&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
+    
+    
+      <category term="arm linux" scheme="http://yoursite.com/tags/arm-linux/"/>
     
   </entry>
   
