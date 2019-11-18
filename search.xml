@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>test picture</title>
+    <url>/2019/11/18/test-picture/</url>
+    <content><![CDATA[<blockquote>
+<p><strong>“新一代”数据中台</strong></p>
+</blockquote>
+<p>在接受量子位采访时，吴明辉介绍说，新一代数据中台是整套落地方案中的核心。</p>
+<p>数据中台近年来很火，主要是指通过数据技术对海量数据进行采集、加工，并进行统一化，形成标准数据，来提供高效服务。</p>
+<a id="more"></a>
+
+<p>得益于对数据的标准化的处理，数据中台能够进一步挖掘数据价值，成为了当前企业最为看重的一个能力。</p>
+<p>在吴明辉看来，这样的数据中台还有很多优化空间，他们推出的“新一代”数据中台就是证明。</p>
+<p>那新一代在何处？</p>
+<p>吴明辉说，最直接的变化是通过“图”的方式，把多源异构的数据之间的关系全部整理好，然后基于知识图谱构建起来。这样存储数据的好处在于，能用空间来换时间，从而使中台响应速度变得更快。</p>
+<img src="/2019/11/18/test-picture/about.jpg" alt="xxxxxxxxxxxx" style="zoom:67%;">
+
+
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% asset_img example.jpg This is an example image %&#125;</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
     <title>Exy4412产品发布</title>
     <url>/2019/11/13/new-article-test/</url>
     <content><![CDATA[<h4 id="Exy4412产品发布"><a href="#Exy4412产品发布" class="headerlink" title="Exy4412产品发布"></a>Exy4412产品发布</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">准备工作：</span><br><span class="line">产品发布之前需要保证程序能够自动运行</span><br><span class="line">1）开机自动运行shell，不需要用户输入enter键</span><br><span class="line">2）把开机之后需要执行的命令放到开机自启动文件内。/etc/profile文件</span><br></pre></td></tr></table></figure>

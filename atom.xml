@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-18T02:45:08.779Z</updated>
+  <updated>2019-11-18T06:45:38.281Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test picture</title>
+    <link href="http://yoursite.com/2019/11/18/test-picture/"/>
+    <id>http://yoursite.com/2019/11/18/test-picture/</id>
+    <published>2019-11-18T03:25:42.000Z</published>
+    <updated>2019-11-18T06:45:38.281Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;“新一代”数据中台&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在接受量子位采访时，吴明辉介绍说，新一代数据中台是整套落地方案中的核心。&lt;/p&gt;
+&lt;p&gt;数据中台近年来很火，主要是指通过数据技术对海量数据进行采集、加工，并进行统一化，形成标准数据，来提供高效服务。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Exy4412产品发布</title>
