@@ -8,8 +8,6 @@
 </blockquote>
 <p>在接受量子位采访时，吴明辉介绍说，新一代数据中台是整套落地方案中的核心。</p>
 <p>数据中台近年来很火，主要是指通过数据技术对海量数据进行采集、加工，并进行统一化，形成标准数据，来提供高效服务。</p>
-<a id="more"></a>
-
 <p>得益于对数据的标准化的处理，数据中台能够进一步挖掘数据价值，成为了当前企业最为看重的一个能力。</p>
 <p>在吴明辉看来，这样的数据中台还有很多优化空间，他们推出的“新一代”数据中台就是证明。</p>
 <p>那新一代在何处？</p>
@@ -33,8 +31,6 @@
 <li>/work/ui.out &amp;    (后台运行)</li>
 <li>/work/ctrl.out &amp;</li>
 </ul>
-<a id="more"></a>
-
 <p>1、挂载方式<br>2、配置内核支持</p>
 <h2 id="3、重新烧写uboot以及内核"><a href="#3、重新烧写uboot以及内核" class="headerlink" title="3、重新烧写uboot以及内核"></a>3、重新烧写uboot以及内核</h2><p>4、烧写根文件系统到ext3格式的文件</p>
 <p>4.1、进入uboot命令，格式化sd卡</p>
@@ -76,8 +72,6 @@
     <url>/2019/11/12/My-New-Post/</url>
     <content><![CDATA[<p>对于屏幕和键盘有要求的用户，这一次的新品或许很有吸引力。</p>
 <p>北京时间 11 月 13 日晚，和 AirPods Pro 一样，苹果再一次在官网悄悄更新了产品，带来了 16 英寸的 MacBook Pro。虽然没有召开发布会有些出人意料，但这款全新的 MacBook Pro 依然给我们带来了很多升级和亮点，接下来和极客之选（公众号 GeekChoice）一起看看吧。</p>
-<a id="more"></a>
-
 <h2 id="更大显示屏和更强处理器"><a href="#更大显示屏和更强处理器" class="headerlink" title="更大显示屏和更强处理器"></a>更大显示屏和更强处理器</h2><p>近几年在 Windows 笔记本阵营中出现了越来越多的窄边框笔记本电脑，无论是戴尔 XPS 系列还是华为 MateBook 系列，更大的屏占比带来了笔记本电脑视觉上的更好体验，这一点同样也出现在这一次的新 MacBook Pro 上面。</p>
 <p><img src="https://imgslim.geekpark.net/uploads/image/file/20/90/2090c0fab86518bf8a6828c5cc683eab.png" alt="img"></p>
 <p>全新 MacBook Pro 采用了窄边框设计，通过缩小左右边框宽度，在加入 16 英寸屏幕的同时却将机身三围控制在 35.79<em>24.59</em>1.62cm，这一尺寸相比之前的 MacBook Pro 15 英寸版本来说几乎没有多少变化（后者为 34.93<em>24.07</em>1.55cm），但却带来了更大的显示面积，这或许是其替换掉 15 英寸 MacBook Pro 的主要原因。</p>
@@ -105,8 +99,6 @@
     <title>Hello World</title>
     <url>/2017/05/22/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<a id="more"></a>
-
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
@@ -131,8 +123,6 @@
     <title>安装交叉编译器</title>
     <url>/2017/05/22/test2/</url>
     <content><![CDATA[<p>回顾：<br>1、安装交叉编译器<br>arm-linux-gcc<br>gcc编译出来的结果是在ubuntu上运行，在开发板上无法运行<br>arm-linux-gcc: 交叉编译，编译出来的结果，可以在arm芯片上使用</p>
-<a id="more"></a>
-
 <p>2、编译&amp;&amp;下载uboot<br>1）源代码解压<br>2）选择开发板  make tiny4412_config<br>3）make<br>4）下载</p>
 <p>3、编译&amp;&amp;下载内核<br>1）源代码解压<br>2）配置  make menuconfig<br>3）修改makefile，把编译器改为交叉编译<br>4）make &amp;&amp; make zImage</p>
 <p>4、制作根文件系统</p>
