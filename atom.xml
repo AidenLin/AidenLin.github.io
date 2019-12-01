@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-30T09:26:59.107Z</updated>
+  <updated>2019-12-01T08:11:54.098Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,124 +17,22 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test picture</title>
-    <link href="http://yoursite.com/2019/11/18/test-picture/"/>
-    <id>http://yoursite.com/2019/11/18/test-picture/</id>
-    <published>2019-11-18T03:25:42.000Z</published>
-    <updated>2019-11-30T09:26:59.107Z</updated>
+    <title>index</title>
+    <link href="http://yoursite.com/2019/12/01/index/"/>
+    <id>http://yoursite.com/2019/12/01/index/</id>
+    <published>2019-12-01T08:11:25.615Z</published>
+    <updated>2019-12-01T08:11:54.098Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;“新一代”数据中台&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;在接受量子位采访时，吴明辉介绍说，新一代数据中台是整套落地方案中的核心。&lt;/p&gt;
-&lt;p&gt;数据中台近年来很火，主要是指通过数据技术对海量数据进行采集、加工
+        &lt;p&gt;this is a test&lt;/p&gt;
       
     
     </summary>
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>Exy4412产品发布</title>
-    <link href="http://yoursite.com/2019/11/13/new-article-test/"/>
-    <id>http://yoursite.com/2019/11/13/new-article-test/</id>
-    <published>2019-11-13T07:29:30.000Z</published>
-    <updated>2019-11-30T09:26:41.536Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;Exy4412产品发布&quot;&gt;&lt;a href=&quot;#Exy4412产品发布&quot; class=&quot;headerlink&quot; title=&quot;Exy4412产品发布&quot;&gt;&lt;/a&gt;Exy4412产品发布&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;tabl
-      
-    
-    </summary>
-    
-    
-      <category term="C" scheme="http://yoursite.com/categories/C/"/>
-    
-    
-      <category term="arm" scheme="http://yoursite.com/tags/arm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>My New Post</title>
-    <link href="http://yoursite.com/2019/11/12/My-New-Post/"/>
-    <id>http://yoursite.com/2019/11/12/My-New-Post/</id>
-    <published>2019-11-12T08:33:49.000Z</published>
-    <updated>2019-11-30T09:26:32.526Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;对于屏幕和键盘有要求的用户，这一次的新品或许很有吸引力。&lt;/p&gt;
-&lt;p&gt;北京时间 11 月 13 日晚，和 AirPods Pro 一样，苹果再一次在官网悄悄更新了产品，带来了 16 英寸的 MacBook Pro。虽然没有召开发布会有些出人意料，但这款全新的 MacBoo
-      
-    
-    </summary>
-    
-    
-      <category term="news" scheme="http://yoursite.com/categories/news/"/>
-    
-    
-      <category term="macbook" scheme="http://yoursite.com/tags/macbook/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2017/05/22/hello-world/"/>
-    <id>http://yoursite.com/2017/05/22/hello-world/</id>
-    <published>2017-05-21T16:00:00.000Z</published>
-    <updated>2019-11-30T09:26:22.572Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
-    
-    </summary>
-    
-    
-      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
-    
-    
-      <category term="blog" scheme="http://yoursite.com/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>安装交叉编译器</title>
-    <link href="http://yoursite.com/2017/05/22/test2/"/>
-    <id>http://yoursite.com/2017/05/22/test2/</id>
-    <published>2017-05-21T16:00:00.000Z</published>
-    <updated>2019-11-30T09:26:50.413Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;回顾：&lt;br&gt;1、安装交叉编译器&lt;br&gt;arm-linux-gcc&lt;br&gt;gcc编译出来的结果是在ubuntu上运行，在开发板上无法运行&lt;br&gt;arm-linux-gcc: 交叉编译，编译出来的结果，可以在arm芯片上使用&lt;/p&gt;
-&lt;p&gt;2、编译&amp;amp;&amp;amp;下载ub
-      
-    
-    </summary>
-    
-    
-      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
-    
-    
-      <category term="arm linux" scheme="http://yoursite.com/tags/arm-linux/"/>
     
   </entry>
   
