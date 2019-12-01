@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>index</title>
-    <url>/2019/12/01/index/</url>
-    <content><![CDATA[<p>this is a test</p>]]></content>
+    <title>VS2019 编译 opencv 32 位库</title>
+    <url>/2019/12/01/Compile-the-opencv-to-32bit/</url>
+    <content><![CDATA[<p><strong>配置：</strong></p>
+<p>window10</p>
+<p>Visual Studio 2019 Community</p>
+<p>Cmake</p>
+<p>Opencv源码</p>
+<a id="more"></a>
+
+
+
+<p><strong>第一步：</strong></p>
+<p>下载opencv源码，我下载的源码是opencv3.4.6（其他版本一样）</p>
+<p><img src="/2019/12/01/Compile-the-opencv-to-32bit/E:%5CBlog%5Csource_posts%5CCompile-the-opencv-to-32bit%5C1.png" alt="1"></p>
+<p>源码如上图所示</p>
+<p>接着在合适的位置新建一个文件夹（保存你编译后的代码），我是在源码的同一级目录新建了一个build32的文件夹【注：build文件夹位官方编译的】</p>
+<p><img src="/2019/12/01/Compile-the-opencv-to-32bit/E:%5CBlog%5Csource_posts%5CCompile-the-opencv-to-32bit%5C2.png" alt="2"></p>
+<p><strong>第二步：</strong></p>
+]]></content>
+      <categories>
+        <category>opencv</category>
+      </categories>
+      <tags>
+        <tag>opencv</tag>
+      </tags>
   </entry>
 </search>
