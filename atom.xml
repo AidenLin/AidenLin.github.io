@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-02T06:03:26.224Z</updated>
+  <updated>2019-12-02T08:31:13.949Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,15 +21,21 @@
     <link href="http://yoursite.com/2019/12/01/Compile-the-opencv-to-32bit/"/>
     <id>http://yoursite.com/2019/12/01/Compile-the-opencv-to-32bit/</id>
     <published>2019-12-01T08:19:44.000Z</published>
-    <updated>2019-12-02T06:03:26.224Z</updated>
+    <updated>2019-12-02T08:31:13.949Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;&lt;strong&gt;配置：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;window10&lt;/p&gt;
-&lt;p&gt;Visual Studio 2019 Community&lt;/p&gt;
-&lt;p&gt;Cmake&lt;/p&gt;
-&lt;p&gt;Opencv源码&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;windows 10&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Visual Studio 2019 Community&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Cmake 3.16&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Opencv3.4.6 源码&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     

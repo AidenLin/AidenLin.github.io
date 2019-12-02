@@ -4,14 +4,20 @@
     <title>VS2019 编译 opencv 32 位库</title>
     <url>/2019/12/01/Compile-the-opencv-to-32bit/</url>
     <content><![CDATA[<p><strong>配置：</strong></p>
-<p>window10</p>
-<p>Visual Studio 2019 Community</p>
-<p>Cmake</p>
-<p>Opencv源码</p>
+<ul>
+<li><p>windows 10</p>
+</li>
+<li><p>Visual Studio 2019 Community</p>
+</li>
+<li><p>Cmake 3.16</p>
+</li>
+<li><p>Opencv3.4.6 源码</p>
+</li>
+</ul>
 <a id="more"></a>
 
-
-
+<p><strong>【前言】</strong></p>
+<p>由于opencv官网下载的程序只有 x64，也就是只有64位版本的，近期开发程序，要用到 32 版本的opencv，从网上找到教程自己编译 32 位版本的，磕磕碰碰也走了不少弯路，所以在此做个笔记，供自己以后参考，也给有需要的同学提供借鉴，少走一些弯路。</p>
 <p><strong>第一步：</strong></p>
 <p>下载opencv源码，我下载的源码是opencv3.4.6（其他版本一样）</p>
 <p><img src="/2019/12/01/Compile-the-opencv-to-32bit/1.png" alt="1"></p>
@@ -19,6 +25,35 @@
 <p>接着在合适的位置新建一个文件夹（保存你编译后的代码），我是在源码的同一级目录新建了一个build32的文件夹【注：build文件夹位官方编译的】</p>
 <p><img src="/2019/12/01/Compile-the-opencv-to-32bit/2.png" alt="2"></p>
 <p><strong>第二步：</strong></p>
+<p>下载 Cmake，打开Cmake界面如下图所示：</p>
+<p><img src="/2019/12/01/Compile-the-opencv-to-32bit/3.png" alt="3"></p>
+<p>在第一行选择你的源码所在的路径</p>
+<p>在第二行选择你新建的文件夹（这个文件夹保存你编译后的代码）</p>
+<p>选择完成后，点击左下角的 <u>Configure 按钮</u>  ，点击完成后，界面如下图所示</p>
+<p><img src="/2019/12/01/Compile-the-opencv-to-32bit/4.png" alt="4"></p>
+<p>第一行选择vs2019，第二行选择 win32，因为要编译成 32 位的代码，第三行不用填， 单选按钮选择第一个。点击 finish，这时候程序就开始编译了【注：编译期间需要联网下载dll，注意不要断网】，如下图所示</p>
+<p><img src="/2019/12/01/Compile-the-opencv-to-32bit/5.png" alt="5"></p>
+<p>【注】因为我新建的build32文件夹已经有代码了，为了截图写博客，新建了一个test文件夹，请忽略。</p>
+<p>编译完成如下图所示：</p>
+<p><img src="/2019/12/01/Compile-the-opencv-to-32bit/6.png" alt="6"></p>
+<p>在红色区域找到  <strong>BUILD_opencv_world</strong> ，选中</p>
+<p><img src="/2019/12/01/Compile-the-opencv-to-32bit/7.png" alt="7"></p>
+<p>再次点击 Configure 按钮，等待编译完成，这时候编译完成应该就没有红色区域了，如果还有红色区域的话，再点击一次 Configure 按钮，直到没有红色为止。</p>
+<p>最后，点击 <u>Generate 按钮</u>，等待结束。</p>
+<p><strong>第三步：</strong></p>
+<p>这时候，在你新建的文件夹下【我的文件夹是build32】，如下图所示</p>
+<p><img src="/2019/12/01/Compile-the-opencv-to-32bit/8.png" alt="8"></p>
+<p>你会看到 <u>OpenCV.sln</u> 文件，如果安装了vs的话，这个文件应该会和 VS 关联，双击会默认用 VS 打开，双击用VS打开，如下图所示</p>
+<p><img src="/2019/12/01/Compile-the-opencv-to-32bit/9.png" alt="9"></p>
+<p>接下来，点击菜单栏的  <u>生成–&gt; 批生成</u>  ，如下图所示</p>
+<p><img src="/2019/12/01/Compile-the-opencv-to-32bit/10.png" alt="10"></p>
+<p>找到 INSTALL , 把 Debug 和 Release 选中。再点击生成。程序会一直编译，时间有点长，我用我的笔记本电脑大概跑了2个小时【注：程序编译很吃CPU，在编译的过程中，我的CPU利用率一直是 100% 】</p>
+<p>最后编译完成，如下图所示</p>
+<p><img src="/2019/12/01/Compile-the-opencv-to-32bit/11.png" alt></p>
+<p>生成成功！</p>
+<p><strong>第四步：</strong></p>
+<p>打开你新建的文件夹【注：编译完成后文件夹很大，我的占用控件接近 4G】，这时候里面会多出一个 install 文件夹，打开 install 文件夹，看到里面有个 x86 文件（如下图所示），恭喜你，已经成功了，里面的目录结构和官方自带的 x64 文件夹的目录结构一样，include文件夹里面也是一些C++函数库，直接调用即可。</p>
+<p><img src="/2019/12/01/Compile-the-opencv-to-32bit/12.png" alt="12"></p>
 ]]></content>
       <categories>
         <category>opencv</category>
