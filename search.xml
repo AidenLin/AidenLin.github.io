@@ -1,6 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>使用hexo新建文章并发布</title>
+    <url>/2020/01/15/hexo-post-article/</url>
+    <content><![CDATA[<p>【<strong>创建新文章</strong>】</p>
+<p>​    根目录命令行输入<code>hexo new &lt;模板&gt; &lt;文章名&gt;</code> 新建文章，其中<code>&lt;模板&gt;</code>在根目录<code>scaffolds</code>文件夹中，默认情况下有三个模板<code>post</code>、<code>draft</code>、<code>page</code>。</p>
+<a id="more"></a>
+
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>功能</th>
+<th align="left">路径</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>post</td>
+<td>新建文章</td>
+<td align="left">/source/_posts/</td>
+</tr>
+<tr>
+<td>draft</td>
+<td>新建草稿</td>
+<td align="left">/source/_drafts/</td>
+</tr>
+<tr>
+<td>page</td>
+<td>新建页面（标签页，分类页等）</td>
+<td align="left">/source/</td>
+</tr>
+</tbody></table>
+<p>​     通常情况下使用<code>hexo new post &lt;title&gt;</code>即可，注意这里的<code>title</code>不是文章名，而是新建的文件名，具体文章中显示的文章标题可以在文章文件中修改。</p>
+<p>【<strong>在博客中添加图片</strong>】</p>
+<p>​    在博客的根目录的配置文件<code>_config.yml</code>中，找到 <code>post_asset_folder</code>项，设置为<code>true</code> ，这样在创建文章时会自动在文章<code>.md</code>所在目录<code>/source/_posts</code>文件夹内生成一个与文章同名的文件夹。例如新建文章<code>hexo new post example</code>则会生成一个<code>example.md</code>文件与一个名为<code>example</code>的文件夹。</p>
+<p>把example这个博文需要展示的图片放在example文件夹目录下；</p>
+<p>文章内使用<code>[% asset_img slug [title] %]</code>（将方括号][替换为花括号}{）的格式进行插入图片即可。</p>
+<p>【<strong>发布新文章</strong>】</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">$ hexo clean  <span class="comment">//清除缓存文件 (db.json) 和已生成的静态文件 (public)</span></span><br><span class="line">$ hexo g 	  <span class="comment">//生成缓存和静态文件</span></span><br><span class="line">$ hexo d      <span class="comment">//重新部署到服务器</span></span><br></pre></td></tr></table></figure>
+
+<p>​    以上是简写，也可以</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">$ hexo clean    <span class="comment">//清除缓存文件 (db.json) 和已生成的静态文件 (public)</span></span><br><span class="line">$ hexo generate <span class="comment">//生成静态页面</span></span><br><span class="line">$ hexo deploy   <span class="comment">//将文章部署到Github</span></span><br></pre></td></tr></table></figure>
+
+<p>​    以上就是发布新文章到github，也可以部署到本地，在浏览中访问</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo s  <span class="comment">//本地查看预览效果</span></span><br></pre></td></tr></table></figure>
+
+<p> 浏览器打开 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 即可查看效果，默认端口为4000</p>
+<p>————————————————————分割线————————————————————————-</p>
+<p>【<strong>关闭评论</strong>】</p>
+<p>​    当集成了评论系统，如 多说 或者 Disqus，所有新建的页面都将自动开启评论。若你不需要评论，请在页面的 Front-matter 里添加 <code>comments</code> 字段，并将值设置为 <code>false</code>。如下所示： </p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: <span class="keyword">new</span> title</span><br><span class="line">date: <span class="number">2017</span><span class="number">-2</span><span class="number">-21</span> <span class="number">21</span>:<span class="number">34</span>:<span class="number">29</span></span><br><span class="line">comments: <span class="literal">false</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VS2019 编译 opencv 32 位库</title>
     <url>/2019/12/01/Compile-the-opencv-to-32bit/</url>
     <content><![CDATA[<p><strong>配置：</strong></p>

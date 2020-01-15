@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-02T08:31:13.949Z</updated>
+  <updated>2020-01-15T01:13:19.056Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用hexo新建文章并发布</title>
+    <link href="http://yoursite.com/2020/01/15/hexo-post-article/"/>
+    <id>http://yoursite.com/2020/01/15/hexo-post-article/</id>
+    <published>2020-01-15T00:44:22.000Z</published>
+    <updated>2020-01-15T01:13:19.056Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;【&lt;strong&gt;创建新文章&lt;/strong&gt;】&lt;/p&gt;
+&lt;p&gt;​    根目录命令行输入&lt;code&gt;hexo new &amp;lt;模板&amp;gt; &amp;lt;文章名&amp;gt;&lt;/code&gt; 新建文章，其中&lt;code&gt;&amp;lt;模板&amp;gt;&lt;/code&gt;在根目录&lt;code&gt;scaffolds&lt;/code&gt;文件夹中，默认情况下有三个模板&lt;code&gt;post&lt;/code&gt;、&lt;code&gt;draft&lt;/code&gt;、&lt;code&gt;page&lt;/code&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>VS2019 编译 opencv 32 位库</title>
