@@ -46,7 +46,6 @@
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo s  <span class="comment">//本地查看预览效果</span></span><br></pre></td></tr></table></figure>
 
 <p> 浏览器打开 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 即可查看效果，默认端口为4000</p>
-<p>————————————————————分割线————————————————————————-</p>
 <p>【<strong>关闭评论</strong>】</p>
 <p>​    当集成了评论系统，如 多说 或者 Disqus，所有新建的页面都将自动开启评论。若你不需要评论，请在页面的 Front-matter 里添加 <code>comments</code> 字段，并将值设置为 <code>false</code>。如下所示： </p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: <span class="keyword">new</span> title</span><br><span class="line">date: <span class="number">2017</span><span class="number">-2</span><span class="number">-21</span> <span class="number">21</span>:<span class="number">34</span>:<span class="number">29</span></span><br><span class="line">comments: <span class="literal">false</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>]]></content>
