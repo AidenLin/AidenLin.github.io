@@ -1,6 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>linux常用命令</title>
+    <url>/2020/01/15/linux-common-commands/</url>
+    <content><![CDATA[<p>【<strong>1</strong>】Linux uname命令用于显示系统信息。uname可显示电脑以及操作系统的相关信息。</p>
+<a id="more"></a>
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">uname -a</span><br><span class="line">    </span><br><span class="line">cat /proc/version</span><br></pre></td></tr></table></figure>
+
+
+
+<p>【<strong>2</strong>】Linux查看发行版本信息（Debian为例）</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">lsb_release -a</span><br><span class="line"></span><br><span class="line">cat /etc/issue</span><br></pre></td></tr></table></figure>
+
+
+
+<p>【<strong>3</strong>】查看Linux系统是 32 位还是 64 位</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">getconf WORD_BIT  <span class="comment">//获得word位数</span></span><br><span class="line"></span><br><span class="line">getconf LONG_BIT  <span class="comment">//获得long位数</span></span><br></pre></td></tr></table></figure>
+
+<p> 64位系统中应该分别得到32和64。32位系统中应该分别得到32和32。 </p>
+<p>【<strong>4</strong>】Linux回收站所在的路径</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">~/.local/share/Trash</span><br></pre></td></tr></table></figure>
+
+
+
+<p>【<strong>5</strong>】 Linux cp命令主要用于复制文件或目录</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">cp [options] source dest</span><br></pre></td></tr></table></figure>
+
+<p><strong>参数说明</strong>：</p>
+<ul>
+<li>-f：覆盖已经存在的目标文件而不给出提示。</li>
+<li>-i：与-f选项相反，在覆盖目标文件之前给出提示，要求用户确认是否覆盖，回答”y”时目标文件将被覆盖。</li>
+<li>-r：若给出的源文件是一个目录文件，此时将复制该目录下所有的子目录和文件。</li>
+</ul>
+<p>【<strong>6</strong>】chmod命令改写文件读写权限</p>
+<p> Linux/Unix 的文件调用权限分为三级 : 文件拥有者、群组、其他。利用 chmod 可以藉以控制文件如何被他人所调用。 </p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">chmod [-cfvR] [--help] [--version] mode file...</span><br><span class="line"></span><br><span class="line">chmod ugo+r file1.txt</span><br><span class="line">chmod ug+w,o-w file1.txt file2.txt</span><br><span class="line">chmod -R <span class="number">777</span> file</span><br></pre></td></tr></table></figure>
+
+<p><strong>参数说明</strong></p>
+<ul>
+<li><p>u 表示该文件的拥有者，g 表示与该文件的拥有者属于同一个群体(group)者，o 表示其他以外的人，a 表示这三者皆是。</p>
+</li>
+<li><p>+ 表示增加权限、- 表示取消权限、= 表示唯一设定权限。</p>
+</li>
+<li><p>-f : 若该文件权限无法被更改也不要显示错误讯息</p>
+</li>
+<li><p>-R : 对目前目录下的所有文件与子目录进行相同的权限变更(即以递回的方式逐个变更)</p>
+</li>
+</ul>
+<p>【<strong>7</strong>】远程连接 linux 失败</p>
+<ol>
+<li>服务器ssh服务未安装或者关闭状态</li>
+</ol>
+<ul>
+<li>服务器执行命令 查看ssh状态</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ps -e |grep ssh</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果没有安装执行</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt install openssh-server</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>服务器防火墙状态未关闭</li>
+</ol>
+<ul>
+<li>服务器执行命令查看防火墙状态</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">service iptables status</span><br><span class="line"></span><br><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果没关闭，执行代码关闭防火墙</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">service iptables stop</span><br><span class="line"></span><br><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure>
+
+
+
+<p>【<strong>8</strong>】linux挂载U盘</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">ls /dev/sd*  <span class="comment">//列举/dev下设备文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//插入U盘</span></span><br><span class="line">ls /dev/sd* <span class="comment">//多出来的就是你插入的U盘</span></span><br><span class="line">sudo mount /dev/sda4 /mnt/   <span class="comment">//我的设备名是sda4,把U盘挂载到 /mnt/目录下,也可以自己新建文件夹</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//卸载</span></span><br><span class="line">umount /dev/sda4</span><br><span class="line"><span class="comment">//或者</span></span><br><span class="line">umount /mnt/ 	<span class="comment">//卸载挂载文件或者卸载挂载点都可以</span></span><br></pre></td></tr></table></figure>
+
+<p> <strong>参数说明：</strong> </p>
+<ul>
+<li><p>-v：显示较讯息，通常和 -f 用来除错。</p>
+</li>
+<li><p>-a：将 /etc/fstab 中定义的所有档案系统挂上。</p>
+</li>
+<li><p>-F：这个命令通常和 -a 一起使用，它会为每一个 mount 的动作产生一个进程负责执行。在系统需要挂上大量 NFS 档案系统时可以加快挂上的动作。</p>
+</li>
+<li><p>-t：指定档案系统的型态，通常不必指定。mount 会自动选择正确的型态。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>debian</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用hexo新建文章并发布</title>
     <url>/2020/01/15/hexo-post-article/</url>
     <content><![CDATA[<p>【<strong>创建新文章</strong>】</p>

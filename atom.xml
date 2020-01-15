@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-15T01:16:12.023Z</updated>
+  <updated>2020-01-15T03:34:26.107Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux常用命令</title>
+    <link href="http://yoursite.com/2020/01/15/linux-common-commands/"/>
+    <id>http://yoursite.com/2020/01/15/linux-common-commands/</id>
+    <published>2020-01-15T01:19:34.000Z</published>
+    <updated>2020-01-15T03:34:26.107Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;【&lt;strong&gt;1&lt;/strong&gt;】Linux uname命令用于显示系统信息。uname可显示电脑以及操作系统的相关信息。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="debian" scheme="http://yoursite.com/categories/debian/"/>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>使用hexo新建文章并发布</title>
