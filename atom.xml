@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-15T03:34:26.107Z</updated>
+  <updated>2020-01-16T01:41:26.460Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,75 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo博客常见的错误</title>
+    <link href="http://yoursite.com/2020/01/16/hexo-common-mistakes/"/>
+    <id>http://yoursite.com/2020/01/16/hexo-common-mistakes/</id>
+    <published>2020-01-16T01:30:47.000Z</published>
+    <updated>2020-01-16T01:41:26.460Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;code&gt;hexo g&lt;/code&gt; 生成静态文件的时候，在 public文件夹下面就是找不到，新写的文章就是无法生成对应的静态文件。&lt;/p&gt;
+&lt;p&gt;【&lt;strong&gt;解决方法&lt;/strong&gt;】&lt;/p&gt;
+&lt;p&gt;运行&lt;/p&gt;
+&lt;figure class=&quot;highligh
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>debian安装cifs协议</title>
+    <link href="http://yoursite.com/2020/01/16/debian-install-cfis/"/>
+    <id>http://yoursite.com/2020/01/16/debian-install-cfis/</id>
+    <published>2020-01-16T00:30:51.000Z</published>
+    <updated>2020-01-16T01:29:00.971Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
+    
+    
+      <category term="cifs" scheme="http://yoursite.com/tags/cifs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Debian(32位)安装QT</title>
+    <link href="http://yoursite.com/2020/01/16/debian-install-qt/"/>
+    <id>http://yoursite.com/2020/01/16/debian-install-qt/</id>
+    <published>2020-01-16T00:01:11.000Z</published>
+    <updated>2020-01-16T01:29:16.524Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;【&lt;strong&gt;系统配置&lt;/strong&gt;】&lt;/p&gt;
+&lt;p&gt;​    Debian 9.3 （stretch）【armv7l GNU/Linux】&lt;/p&gt;
+&lt;p&gt;​    Qt 5.5.1 (qt-opensource-linux-x86-5.5.1.run)&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="debian" scheme="http://yoursite.com/categories/debian/"/>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>linux常用命令</title>
@@ -64,7 +133,7 @@
     <link href="http://yoursite.com/2019/12/01/Compile-the-opencv-to-32bit/"/>
     <id>http://yoursite.com/2019/12/01/Compile-the-opencv-to-32bit/</id>
     <published>2019-12-01T08:19:44.000Z</published>
-    <updated>2019-12-02T08:31:13.949Z</updated>
+    <updated>2020-01-16T01:28:25.893Z</updated>
     
     <summary type="html">
     
