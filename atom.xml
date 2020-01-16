@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-16T01:41:26.460Z</updated>
+  <updated>2020-01-16T06:05:36.830Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,17 +21,11 @@
     <link href="http://yoursite.com/2020/01/16/hexo-common-mistakes/"/>
     <id>http://yoursite.com/2020/01/16/hexo-common-mistakes/</id>
     <published>2020-01-16T01:30:47.000Z</published>
-    <updated>2020-01-16T01:41:26.460Z</updated>
+    <updated>2020-01-16T06:05:36.830Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;&lt;code&gt;hexo g&lt;/code&gt; 生成静态文件的时候，在 public文件夹下面就是找不到，新写的文章就是无法生成对应的静态文件。&lt;/p&gt;
-&lt;p&gt;【&lt;strong&gt;解决方法&lt;/strong&gt;】&lt;/p&gt;
-&lt;p&gt;运行&lt;/p&gt;
-&lt;figure class=&quot;highligh
-      
+      &lt;p&gt;&lt;code&gt;hexo g&lt;/code&gt; 生成静态文件的时候，在 public文件夹下面就是找不到，新写的文章就是无法生成对应的静态文件。&lt;/p&gt;
     
     </summary>
     
@@ -48,17 +42,23 @@
     <link href="http://yoursite.com/2020/01/16/debian-install-cfis/"/>
     <id>http://yoursite.com/2020/01/16/debian-install-cfis/</id>
     <published>2020-01-16T00:30:51.000Z</published>
-    <updated>2020-01-16T01:29:00.971Z</updated>
+    <updated>2020-01-16T08:38:34.349Z</updated>
     
     <summary type="html">
+    
+      &lt;h5 id=&quot;【背景】&quot;&gt;&lt;a href=&quot;#【背景】&quot; class=&quot;headerlink&quot; title=&quot;【背景】&quot;&gt;&lt;/a&gt;【背景】&lt;/h5&gt;&lt;p&gt;  现在有一台windows系统（win10）电脑，有一台linux系统（debian9）电脑，有两个需求，我在Windows下面可以访问Linux系统的文件夹，在Linux下面可以访问Windows下面的文件夹。&lt;/p&gt;
     
     </summary>
     
     
       <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
     
+      <category term="debian" scheme="http://yoursite.com/categories/linux/debian/"/>
+    
     
       <category term="cifs" scheme="http://yoursite.com/tags/cifs/"/>
+    
+      <category term="samba" scheme="http://yoursite.com/tags/samba/"/>
     
   </entry>
   

@@ -4,6 +4,8 @@
     <title>hexo博客常见的错误</title>
     <url>/2020/01/16/hexo-common-mistakes/</url>
     <content><![CDATA[<p><code>hexo g</code> 生成静态文件的时候，在 public文件夹下面就是找不到，新写的文章就是无法生成对应的静态文件。</p>
+<a id="more"></a>
+
 <p>【<strong>解决方法</strong>】</p>
 <p>运行</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo  g  --debug</span><br></pre></td></tr></table></figure>
@@ -24,12 +26,93 @@
   <entry>
     <title>debian安装cifs协议</title>
     <url>/2020/01/16/debian-install-cfis/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h5 id="【背景】"><a href="#【背景】" class="headerlink" title="【背景】"></a>【背景】</h5><p>  现在有一台windows系统（win10）电脑，有一台linux系统（debian9）电脑，有两个需求，我在Windows下面可以访问Linux系统的文件夹，在Linux下面可以访问Windows下面的文件夹。</p>
+<a id="more"></a>
+
+
+
+<blockquote>
+<h3 id="Windows访问Linux系统的文件夹"><a href="#Windows访问Linux系统的文件夹" class="headerlink" title="Windows访问Linux系统的文件夹"></a>Windows访问Linux系统的文件夹</h3></blockquote>
+<h5 id="【第一步】"><a href="#【第一步】" class="headerlink" title="【第一步】"></a>【第一步】</h5><p>这个功能实现需要在Linux系统上面安装samba。首先更换一下Linux系统的源（操作前请做好相应的备份）。直接编辑 <code>/etc/apt/sources.list</code> 文件（需要使用 sudo）。以下是 Debian Stable 参考配置内容（中科大的源）：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">deb http:<span class="comment">//mirrors.ustc.edu.cn/debian stable main contrib non-free</span></span><br><span class="line"><span class="meta"># deb-src http:<span class="comment">//mirrors.ustc.edu.cn/debian stable main contrib non-free</span></span></span><br><span class="line">deb http:<span class="comment">//mirrors.ustc.edu.cn/debian stable-updates main contrib non-free</span></span><br><span class="line"><span class="meta"># deb-src http:<span class="comment">//mirrors.ustc.edu.cn/debian stable-updates main contrib non-free</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta"># deb http:<span class="comment">//mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free</span></span></span><br><span class="line"><span class="meta"># deb-src http:<span class="comment">//mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free</span></span></span><br></pre></td></tr></table></figure>
+
+<p> 更改完 sources.list 文件后请运行 <code>sudo apt-get update</code> 更新索引以生效。 </p>
+<h5 id="【第二步】"><a href="#【第二步】" class="headerlink" title="【第二步】"></a>【第二步】</h5><p>Linux安装Samba</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install samba</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后，执行下面这条语句，看看samba是安装在哪个文件夹</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo find / -name samba</span><br></pre></td></tr></table></figure>
+
+<p>我的是安装在 <code>/usr/share/samba</code> 这个目录下面，进入到这个目录中，找到 smb.conf 文件，打开这个文件并编辑，在文件的最后面添加如下内容：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">[linux_share]</span><br><span class="line">        comment = This is a Shared folder <span class="keyword">for</span> Linux   #共享描述</span><br><span class="line">        path = /<span class="built_in">home</span>/debian/Desktop/linux_share       #共享目录路径</span><br><span class="line">        <span class="keyword">public</span> = yes                				  #允许guest用户访问</span><br><span class="line">        writable = yes                                #允许在linux_share目录下写入</span><br><span class="line">        directory mask = <span class="number">0775</span>                         #默认创建目录权限 rwxrwxrwx</span><br><span class="line">        create mask = <span class="number">0775</span>                            #默认创建文件权限 rwxrwxrwx</span><br><span class="line">        <span class="comment">//valid users = root  				          #允许访问该共享的用户</span></span><br><span class="line">        <span class="comment">//write list = root                           #可写入共享的用户列表</span></span><br><span class="line">        browseable = yes                              #该指定共享目录可浏览</span><br><span class="line">        <span class="built_in">available</span> = yes                               #该指定共享资源可使用</span><br></pre></td></tr></table></figure>
+
+<p>由于我没创建用户，倒数三四两行我没写</p>
+<p> 编辑好之后保存，然后运行如下命令重新加载 smb.conf，并重启 samba </p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">/usr/sbin/service smbd reload   <span class="comment">//重新加载smb.conf</span></span><br><span class="line"></span><br><span class="line">/usr/sbin/service smbd restart  <span class="comment">//重启 samba</span></span><br></pre></td></tr></table></figure>
+
+<p>【<strong>注</strong>】我的Linux系统找不到 service 命令，于是我又找到另一种方法</p>
+<p>  在 <code>/etc/init.d/</code> 目录下面，找到了 smbd 服务，运行以下命令即可</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo ./smbd reload</span><br><span class="line"></span><br><span class="line">sudo ./smbd restart</span><br></pre></td></tr></table></figure>
+
+<p> 查看samba运行状态是否正常运行：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl status smbd</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="【第三步】"><a href="#【第三步】" class="headerlink" title="【第三步】"></a>【第三步】</h5><p>ifconfig 命令找到 Linux 系统的 IP 地址，我查询到的是 192.168.100.31，你的 Windows 系统要和你的 Linux 系统在同一个网段下面才可以访问。</p>
+<p>关闭防火墙，找不到命令 <code>Unit firewalld.service not loaded.</code>， 安装 firewalld，<code>sudo apt-get install firewalld</code>。</p>
+<p>执行 <code>sudo systemctl stop firewalld.service</code>  </p>
+<p>或者 <code>/usr/sbin/service firewalld stop</code> 关闭防火墙</p>
+<p>使用 <code>systemctl disable firewalld.service</code> 彻底关闭防火墙</p>
+<p>在Windows系统，win+R键，输入</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">\\你的IP地址    <span class="comment">//我的是 \\192.168.100.31 即可看到你共享的文件夹</span></span><br></pre></td></tr></table></figure>
+
+<p>如果还是看不到文件夹，那么尝试下面这种方法</p>
+<blockquote>
+<p><strong>启用Windows SMB功能</strong></p>
+</blockquote>
+<p> Win10自带的 CIFS 文件共享支持 默认没有启用，因此无法访问samba共享出来的文件夹 ，搜索 Windows 功能，选择启用或关闭Windows功能，在弹窗中下拉找到 SMB 1.0/CIFS File Sharing Support（或CIFS 文件共享支持），勾选确认重启即可</p>
+<blockquote>
+<h3 id="Linux下面访问Windows下面的文件夹"><a href="#Linux下面访问Windows下面的文件夹" class="headerlink" title="Linux下面访问Windows下面的文件夹"></a>Linux下面访问Windows下面的文件夹</h3></blockquote>
+<p>【<strong>第一步</strong>】</p>
+<p>在Windows下面新建一个文件夹，然后右击 -&gt; 属性 -&gt; 共享 -&gt; 共享 -&gt; 添加Everyone -&gt; 共享 -&gt; 完成。</p>
+<p>【<strong>第二步</strong>】</p>
+<p><code>sudo apt install cifs-utils</code> 安装cifs协议</p>
+<p><code>ipconfig</code> 查看你的 Windows IP地址，执行</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">sudo mount -t cifs <span class="comment">//172.16.13.48/debiantest    /home/debian/Desktop/share</span></span><br><span class="line">#注释               windowsIP地址 windows共享文件名     linux下面的文件路径</span><br></pre></td></tr></table></figure>
+
+<p>挂载成功以后，你在 linux  share文件夹下面新建的文件，会在 Windows 下的文件夹同步显示。</p>
+<p>【<strong>第三步</strong>】</p>
+<p>我的 第二步挂载失败，报错 ：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mount error : cifs filesystem not supported by the system mount</span><br><span class="line"></span><br><span class="line">error(19): No such device</span><br></pre></td></tr></table></figure>
+
+<p>应该是我的系统不支持 cifs 协议，再确认一下是不是系统的问题</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">zgrep -i cifs /proc/config.gz</span><br></pre></td></tr></table></figure>
+
+<p>执行以后，返回</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># CONFIG_CIFS is not set</span><br></pre></td></tr></table></figure>
+
+<p>估计是系统不支持 CIFS 协议，后来和厂家沟通，厂家给了两个deb包，安装可以了</p>
+<p>安装包的百度云链接：</p>
+<p>链接：<a href="https://pan.baidu.com/s/1tM9pghmo9UI_ENkMGRR_ug" target="_blank" rel="noopener">https://pan.baidu.com/s/1tM9pghmo9UI_ENkMGRR_ug</a><br>提取码：hdha</p>
+<p>将安装包拷贝到 Linux 系统，运行如下命令：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">sudo dpkg -i linux-headers<span class="number">-4.9</span><span class="number">.11</span>_4<span class="number">.9</span><span class="number">.11</span><span class="number">-2</span>_armhf.deb</span><br><span class="line">sudo dpkg -i linux-<span class="built_in">image</span><span class="number">-4.9</span><span class="number">.11</span>_4<span class="number">.9</span><span class="number">.11</span><span class="number">-2</span>_armhf.deb</span><br></pre></td></tr></table></figure>
+
+<p>再执行</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">sudo /sbin/modprobe fuse</span><br><span class="line">sudo /sbin/modprobe cifs</span><br><span class="line"></span><br><span class="line">sudo lsmod | grep cifs  <span class="comment">//查看cifs是否运行</span></span><br></pre></td></tr></table></figure>
+
+<p>最后再执行【<strong>第二步</strong>】即可。</p>
+<p>【<strong>笔记</strong>】</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#以下命令无效</span><br><span class="line">sudo apt install selinux-utils</span><br><span class="line">sudo /usr/sbin/getenforce</span><br></pre></td></tr></table></figure>
+
+]]></content>
       <categories>
         <category>linux</category>
+        <category>debian</category>
       </categories>
       <tags>
         <tag>cifs</tag>
+        <tag>samba</tag>
       </tags>
   </entry>
   <entry>
