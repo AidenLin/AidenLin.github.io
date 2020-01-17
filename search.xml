@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Qt在debian系统上运行出现的错误</title>
+    <url>/2020/01/16/Qt-error-running-on-debian/</url>
+    <content><![CDATA[<h5 id="【背景】"><a href="#【背景】" class="headerlink" title="【背景】"></a>【背景】</h5><p>将QT程序拷贝到 Debian 系统上编译时，报如下错误：</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">Unknown module(s) in QT: multimedia</span><br></pre></td></tr></table></figure>
+
+<p>从网上找到问题所在，应该是程序打开了串口或者调用了多媒体库的问题。</p>
+<p>【<strong>解决方法</strong>】</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">sudo apt-get install qtmultimedia5-dev</span><br></pre></td></tr></table></figure>
+
+<p>安装完即可。</p>
+]]></content>
+      <categories>
+        <category>debian</category>
+      </categories>
+      <tags>
+        <tag>qt</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo博客常见的错误</title>
     <url>/2020/01/16/hexo-common-mistakes/</url>
     <content><![CDATA[<p><code>hexo g</code> 生成静态文件的时候，在 public文件夹下面就是找不到，新写的文章就是无法生成对应的静态文件。</p>
