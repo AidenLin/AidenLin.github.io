@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>android_6_filepersistence</title>
+    <title>C++生成动态库返回字符串给C#调用</title>
+    <url>/2020/02/28/CDLLRerurnString/</url>
+    <content><![CDATA[<p>【背景】</p>
+<p>C#调用C++生成的DLL，C#调用函数，接收C++返回的字符串</p>
+<p>【C++】</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="keyword">char</span> buff[<span class="number">20</span>]; <span class="comment">//存储返回的字符串</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">char</span>* <span class="title">testString</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">string</span> tmp = <span class="string">"hello world"</span>;</span><br><span class="line">	strcpy_s(buff, tmp.c_str());</span><br><span class="line">	<span class="keyword">return</span> buff;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>【C#】</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="comment">//导入动态库</span></span><br><span class="line">[<span class="meta">DllImport(<span class="meta-string">"xxxx.dll"</span>, EntryPoint = <span class="meta-string">"testString"</span>, CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)</span>]</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">extern</span> IntPtr <span class="title">testString</span>(<span class="params"></span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//---------------------分割线------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//函数调用</span></span><br><span class="line">IntPtr intPtr = testString();</span><br><span class="line"><span class="keyword">string</span> str = Marshal.PtrToStringAnsi(intPtr);</span><br><span class="line"><span class="comment">//Console.WriteLine(str);</span></span><br><span class="line">MessageBox.Show( str );</span><br></pre></td></tr></table></figure>
+
+
+
+<p>以上就是我的方法，实测可以接收到字符串数据。</p>
+]]></content>
+      <categories>
+        <category>C#</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>C#</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android文件存储,找不到程序生成的data文件</title>
     <url>/2020/02/24/android-6-filepersistence/</url>
     <content><![CDATA[<p>读《Android第一行代码》第六章第二节—文件存储</p>
 <p>Android studio 3.0 以后找不到 Android Device Monitor，看不到程序生成的data文件</p>

@@ -46,31 +46,18 @@
   };
 </script>
 
-  <meta name="description" content="配置：  windows 10  Visual Studio 2019 Community  Cmake 3.16  Opencv3.4.6 源码">
-<meta name="keywords" content="opencv">
+  <meta name="description" content="【背景】 C#调用C++生成的DLL，C#调用函数，接收C++返回的字符串 【C++】 12345678static char buff[20]; &#x2F;&#x2F;存储返回的字符串char* testString()&amp;#123;	string tmp = &quot;hello world&quot;;	strcpy_s(buff, tmp.c_str());	return buff;&amp;#125;   【C#】 12345678">
+<meta name="keywords" content="C++,C#">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VS2019 编译 opencv 32 位库">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;01&#x2F;Compile-the-opencv-to-32bit&#x2F;index.html">
+<meta property="og:title" content="C++生成动态库返回字符串给C#调用">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;28&#x2F;CDLLRerurnString&#x2F;index.html">
 <meta property="og:site_name" content="AidenLin的博客">
-<meta property="og:description" content="配置：  windows 10  Visual Studio 2019 Community  Cmake 3.16  Opencv3.4.6 源码">
+<meta property="og:description" content="【背景】 C#调用C++生成的DLL，C#调用函数，接收C++返回的字符串 【C++】 12345678static char buff[20]; &#x2F;&#x2F;存储返回的字符串char* testString()&amp;#123;	string tmp = &quot;hello world&quot;;	strcpy_s(buff, tmp.c_str());	return buff;&amp;#125;   【C#】 12345678">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;01&#x2F;Compile-the-opencv-to-32bit&#x2F;1.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;01&#x2F;Compile-the-opencv-to-32bit&#x2F;2.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;01&#x2F;Compile-the-opencv-to-32bit&#x2F;3.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;01&#x2F;Compile-the-opencv-to-32bit&#x2F;4.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;01&#x2F;Compile-the-opencv-to-32bit&#x2F;5.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;01&#x2F;Compile-the-opencv-to-32bit&#x2F;6.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;01&#x2F;Compile-the-opencv-to-32bit&#x2F;7.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;01&#x2F;Compile-the-opencv-to-32bit&#x2F;8.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;01&#x2F;Compile-the-opencv-to-32bit&#x2F;9.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;01&#x2F;Compile-the-opencv-to-32bit&#x2F;10.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;01&#x2F;Compile-the-opencv-to-32bit&#x2F;11.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;01&#x2F;Compile-the-opencv-to-32bit&#x2F;12.png">
-<meta property="og:updated_time" content="2020-01-16T01:28:25.893Z">
+<meta property="og:updated_time" content="2020-02-28T06:44:19.581Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;01&#x2F;Compile-the-opencv-to-32bit&#x2F;1.png">
 
-<link rel="canonical" href="http://yoursite.com/2019/12/01/Compile-the-opencv-to-32bit/">
+<link rel="canonical" href="http://yoursite.com/2020/02/28/CDLLRerurnString/">
 
 
 <script id="page-configurations">
@@ -84,7 +71,7 @@
   };
 </script>
 
-  <title>VS2019 编译 opencv 32 位库 | AidenLin的博客</title>
+  <title>C++生成动态库返回字符串给C#调用 | AidenLin的博客</title>
   
 
 
@@ -226,7 +213,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/01/Compile-the-opencv-to-32bit/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/28/CDLLRerurnString/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/longmao.jpg">
@@ -239,7 +226,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          VS2019 编译 opencv 32 位库
+          C++生成动态库返回字符串给C#调用
         </h2>
 
         <div class="post-meta">
@@ -248,24 +235,18 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2019-12-01 16:19:44" itemprop="dateCreated datePublished" datetime="2019-12-01T16:19:44+08:00">2019-12-01</time>
+              <time title="创建时间：2020-02-28 14:30:58 / 修改时间：14:44:19" itemprop="dateCreated datePublished" datetime="2020-02-28T14:30:58+08:00">2020-02-28</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-16 09:28:25" itemprop="dateModified" datetime="2020-01-16T09:28:25+08:00">2020-01-16</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/opencv/" itemprop="url" rel="index">
-                    <span itemprop="name">opencv</span>
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C#</span>
                   </a>
                 </span>
             </span>
@@ -286,8 +267,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2019/12/01/Compile-the-opencv-to-32bit/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2019/12/01/Compile-the-opencv-to-32bit/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/02/28/CDLLRerurnString/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/02/28/CDLLRerurnString/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -297,7 +278,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.1k</span>
+              <span>537</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -316,57 +297,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><strong>配置：</strong></p>
-<ul>
-<li><p>windows 10</p>
-</li>
-<li><p>Visual Studio 2019 Community</p>
-</li>
-<li><p>Cmake 3.16</p>
-</li>
-<li><p>Opencv3.4.6 源码</p>
-</li>
-</ul>
-<a id="more"></a>
+        <p>【背景】</p>
+<p>C#调用C++生成的DLL，C#调用函数，接收C++返回的字符串</p>
+<p>【C++】</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="keyword">char</span> buff[<span class="number">20</span>]; <span class="comment">//存储返回的字符串</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">char</span>* <span class="title">testString</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">string</span> tmp = <span class="string">"hello world"</span>;</span><br><span class="line">	strcpy_s(buff, tmp.c_str());</span><br><span class="line">	<span class="keyword">return</span> buff;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>【前言】</strong></p>
-<p>由于opencv官网下载的程序只有 x64，也就是只有64位版本的，近期开发程序，要用到 32 版本的opencv，从网上找到教程自己编译 32 位版本的，磕磕碰碰也走了不少弯路，所以在此做个笔记，供自己以后参考，也给有需要的同学提供借鉴，少走一些弯路。</p>
-<p><strong>第一步：</strong></p>
-<p>下载opencv源码，我下载的源码是opencv3.4.6（其他版本一样）</p>
-<p><img src="/2019/12/01/Compile-the-opencv-to-32bit/1.png" alt="1"></p>
-<p>源码如上图所示</p>
-<p>接着在合适的位置新建一个文件夹（保存你编译后的代码），我是在源码的同一级目录新建了一个build32的文件夹【注：build文件夹位官方编译的】</p>
-<p><img src="/2019/12/01/Compile-the-opencv-to-32bit/2.png" alt="2"></p>
-<p><strong>第二步：</strong></p>
-<p>下载 Cmake，打开Cmake界面如下图所示：</p>
-<p><img src="/2019/12/01/Compile-the-opencv-to-32bit/3.png" alt="3"></p>
-<p>在第一行选择你的源码所在的路径</p>
-<p>在第二行选择你新建的文件夹（这个文件夹保存你编译后的代码）</p>
-<p>选择完成后，点击左下角的 <u>Configure 按钮</u>  ，点击完成后，界面如下图所示</p>
-<p><img src="/2019/12/01/Compile-the-opencv-to-32bit/4.png" alt="4"></p>
-<p>第一行选择vs2019，第二行选择 win32，因为要编译成 32 位的代码，第三行不用填， 单选按钮选择第一个。点击 finish，这时候程序就开始编译了【注：编译期间需要联网下载dll，注意不要断网】，如下图所示</p>
-<p><img src="/2019/12/01/Compile-the-opencv-to-32bit/5.png" alt="5"></p>
-<p>【注】因为我新建的build32文件夹已经有代码了，为了截图写博客，新建了一个test文件夹，请忽略。</p>
-<p>编译完成如下图所示：</p>
-<p><img src="/2019/12/01/Compile-the-opencv-to-32bit/6.png" alt="6"></p>
-<p>在红色区域找到  <strong>BUILD_opencv_world</strong> ，选中</p>
-<p><img src="/2019/12/01/Compile-the-opencv-to-32bit/7.png" alt="7"></p>
-<p>再次点击 Configure 按钮，等待编译完成，这时候编译完成应该就没有红色区域了，如果还有红色区域的话，再点击一次 Configure 按钮，直到没有红色为止。</p>
-<p>最后，点击 <u>Generate 按钮</u>，等待结束。</p>
-<p><strong>第三步：</strong></p>
-<p>这时候，在你新建的文件夹下【我的文件夹是build32】，如下图所示</p>
-<p><img src="/2019/12/01/Compile-the-opencv-to-32bit/8.png" alt="8"></p>
-<p>你会看到 <u>OpenCV.sln</u> 文件，如果安装了vs的话，这个文件应该会和 VS 关联，双击会默认用 VS 打开，双击用VS打开，如下图所示</p>
-<p><img src="/2019/12/01/Compile-the-opencv-to-32bit/9.png" alt="9"></p>
-<p>接下来，点击菜单栏的  <u>生成–&gt; 批生成</u>  ，如下图所示</p>
-<p><img src="/2019/12/01/Compile-the-opencv-to-32bit/10.png" alt="10"></p>
-<p>找到 INSTALL , 把 Debug 和 Release 选中。再点击生成。程序会一直编译，时间有点长，我用我的笔记本电脑大概跑了2个小时【注：程序编译很吃CPU，在编译的过程中，我的CPU利用率一直是 100% 】</p>
-<p>最后编译完成，如下图所示</p>
-<p><img src="/2019/12/01/Compile-the-opencv-to-32bit/11.png" alt></p>
-<p>生成成功！</p>
-<p><strong>第四步：</strong></p>
-<p>打开你新建的文件夹【注：编译完成后文件夹很大，我的占用控件接近 4G】，这时候里面会多出一个 install 文件夹，打开 install 文件夹，看到里面有个 x86 文件（如下图所示），恭喜你，已经成功了，里面的目录结构和官方自带的 x64 文件夹的目录结构一样，include文件夹里面也是一些C++函数库，直接调用即可。</p>
-<p><img src="/2019/12/01/Compile-the-opencv-to-32bit/12.png" alt="12"></p>
+
+<p>【C#】</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//导入动态库</span></span><br><span class="line">[<span class="meta">DllImport(<span class="meta-string">"xxxx.dll"</span>, EntryPoint = <span class="meta-string">"testString"</span>, CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)</span>]</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">extern</span> IntPtr <span class="title">testString</span>(<span class="params"></span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//---------------------分割线------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//函数调用</span></span><br><span class="line">IntPtr intPtr = testString();</span><br><span class="line"><span class="keyword">string</span> str = Marshal.PtrToStringAnsi(intPtr);</span><br><span class="line"><span class="comment">//Console.WriteLine(str);</span></span><br><span class="line">MessageBox.Show( str );</span><br></pre></td></tr></table></figure>
+
+
+
+<p>以上就是我的方法，实测可以接收到字符串数据。</p>
 
     </div>
 
@@ -386,21 +328,22 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/opencv/" rel="tag"><i class="fa fa-tag"></i> opencv </a>
+              <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C++ </a>
+              <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C# </a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
+                <a href="/2020/02/24/android-6-filepersistence/" rel="next" title="Android文件存储,找不到程序生成的data文件">
+                  <i class="fa fa-chevron-left"></i> Android文件存储,找不到程序生成的data文件
+                </a>
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-                <a href="/2020/01/15/hexo-post-article/" rel="prev" title="使用hexo新建文章并发布">
-                  使用hexo新建文章并发布 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
       </footer>

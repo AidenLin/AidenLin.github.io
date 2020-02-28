@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-24T11:35:51.442Z</updated>
+  <updated>2020-02-28T06:44:19.581Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>android_6_filepersistence</title>
+    <title>C++生成动态库返回字符串给C#调用</title>
+    <link href="http://yoursite.com/2020/02/28/CDLLRerurnString/"/>
+    <id>http://yoursite.com/2020/02/28/CDLLRerurnString/</id>
+    <published>2020-02-28T06:30:58.000Z</published>
+    <updated>2020-02-28T06:44:19.581Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;【背景】&lt;/p&gt;
+&lt;p&gt;C#调用C++生成的DLL，C#调用函数，接收C++返回的字符串&lt;/p&gt;
+&lt;p&gt;【C++】&lt;/p&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span clas
+      
+    
+    </summary>
+    
+    
+      <category term="C#" scheme="http://yoursite.com/categories/C/"/>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+      <category term="C#" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android文件存储,找不到程序生成的data文件</title>
     <link href="http://yoursite.com/2020/02/24/android-6-filepersistence/"/>
     <id>http://yoursite.com/2020/02/24/android-6-filepersistence/</id>
     <published>2020-02-24T11:23:48.000Z</published>
-    <updated>2020-02-24T11:35:51.442Z</updated>
+    <updated>2020-02-28T06:35:08.682Z</updated>
     
     <summary type="html">
     
