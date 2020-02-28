@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>android_6_filepersistence</title>
+    <url>/2020/02/24/android-6-filepersistence/</url>
+    <content><![CDATA[<p>读《Android第一行代码》第六章第二节—文件存储</p>
+<p>Android studio 3.0 以后找不到 Android Device Monitor，看不到程序生成的data文件</p>
+<p>解决办法：</p>
+<p>点击 View –&gt; Tool Windows –&gt; Device File Explorer【如下图所示】</p>
+<p><img src="/2020/02/24/android-6-filepersistence/1.png" alt="1"></p>
+<p>点击即可在右下角看到 Device File Explorer，在这里找到 /data/data/com.example.filepersistencetest/files/ 目录，可以看到生成了 data 文件</p>
+<p><img src="/2020/02/24/android-6-filepersistence/2.png" alt="2"></p>
+<p>【注意】如果看不到 files 文件夹，右击文件夹 [com.example.filepersistencetest] 刷新即可，如下图所示</p>
+<p>点击 Synchronize 同步即可看到。</p>
+<p><img src="/2020/02/24/android-6-filepersistence/3.png" alt="3"></p>
+]]></content>
+      <categories>
+        <category>android</category>
+      </categories>
+      <tags>
+        <tag>android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Qt在debian系统上运行出现的错误</title>
     <url>/2020/01/16/Qt-error-running-on-debian/</url>
     <content><![CDATA[<h5 id="【背景】"><a href="#【背景】" class="headerlink" title="【背景】"></a>【背景】</h5><p>将QT程序拷贝到 Debian 系统上编译时，报如下错误：</p>

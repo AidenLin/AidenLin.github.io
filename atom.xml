@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-17T00:13:10.409Z</updated>
+  <updated>2020-02-24T11:35:51.442Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>android_6_filepersistence</title>
+    <link href="http://yoursite.com/2020/02/24/android-6-filepersistence/"/>
+    <id>http://yoursite.com/2020/02/24/android-6-filepersistence/</id>
+    <published>2020-02-24T11:23:48.000Z</published>
+    <updated>2020-02-24T11:35:51.442Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;读《Android第一行代码》第六章第二节—文件存储&lt;/p&gt;
+&lt;p&gt;Android studio 3.0 以后找不到 Android Device Monitor，看不到程序生成的data文件&lt;/p&gt;
+&lt;p&gt;解决办法：&lt;/p&gt;
+&lt;p&gt;点击 View –&amp;gt; Tool W
+      
+    
+    </summary>
+    
+    
+      <category term="android" scheme="http://yoursite.com/categories/android/"/>
+    
+    
+      <category term="android" scheme="http://yoursite.com/tags/android/"/>
+    
+  </entry>
   
   <entry>
     <title>Qt在debian系统上运行出现的错误</title>
